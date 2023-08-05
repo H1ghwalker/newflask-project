@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Posts title
+{% endblock %}
+
+{% block content %}
+<h1>Posts</h1>
+
+<article class="blog-post">
+    <h2 class="display-5 link-body-emphasis mb-1">New feature</h2>
+    {% for post in posts %}
+    <h4>{{ post.title }}</h4>
+    <p>{{ post.text }}</p>
+    <a href="">Read more</a>
+    {% endfor %}
+  </article>
+{% endblock %}
